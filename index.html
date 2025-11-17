@@ -4,28 +4,40 @@
   <meta charset="UTF-8">
   <title>Capstone Project - NYPD arrest data</title>
 
-  <!-- Add this STYLE block inside <head> -->
   <style>
     /* Page background and text */
     body {
-      background-color: white;  /* white page background */
-      color: black;             /* dark text for readability */
-      margin: 0;                /* remove default body margins so header spans full width */
+      background-color: white;
+      color: black;
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    /* Make your existing H1 behave like a blue header bar */
-    h1 {
-      background-color: #003366; /* blue header */
-      color: white;               /* white header text */
-      margin: 0;                  /* remove default top/bottom margins so it looks like a bar */
-      padding: 20px 16px;         /* space inside the header bar */
-      font-size: 1.9rem;
+    /* Header bar with logo + title side-by-side */
+    .site-header {
+      background-color: #003366;  /* blue */
+      color: white;
+      margin: 0;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;                  /* space between logo and title */
     }
 
-    /* Optional: give main content some breathing room */
-    main, .content {
+    .site-header img.logo {
+      height: 40px;               /* tweak 32–60px as you like */
+      width: auto;
+      display: block;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .content {
       max-width: 900px;
       margin: 20px auto;
       padding: 0 16px;
@@ -37,10 +49,12 @@
 </head>
 <body>
 
-  <!-- Your existing H1 becomes the blue header bar via CSS above -->
-  <h1>FAU Capstone Project - NYPD Arrest Data</h1>
+  <!-- New header container with logo + title -->
+  <div class="site-header">
+    <img src="Florida_Atlantic_Owls_logo.svg" alt="FAU logo" class="logo">
+    <h1>FAU Capstone Project - NYPD Arrest Data</h1>
+  </div>
 
-  <!-- Wrap the rest in a simple container for nicer margins (optional) -->
   <div class="content">
     <p>This site hosts all deliverables for the Florida Atlantic University Capstone project that focuses on mapping and predicting offenses while utilizing NYPD arrest data.</p>
     <p>This project aims to identify and predict the probability of the most prominent offense types for each precinct within New York City for each day of the week, providing actionable insights for local law enforcement agencies and communities.</p>
@@ -48,7 +62,8 @@
     <h2>Deliverables:</h2>
     <ul>
       <li><a href="Capstone-Poster.pdf">Poster (PDF)</a></li>
-      <li><a href="Capstone Presentation.pdf">Presentation (PDF)</a></li>
+      <!-- If your file name has a space, either rename to Capstone_Presentation.pdf or link as Capstone%20Presentation.pdf -->
+      <li><a href="Capstone_Presentation.pdf">Presentation (PDF)</a></li>
     </ul>
 
     <p>Created by Kristen Kane.</p>
@@ -56,5 +71,3 @@
 
 </body>
 </html>
-
-
